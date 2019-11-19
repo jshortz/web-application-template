@@ -38,6 +38,17 @@ class PostsPage extends React.Component {
         }
     }
 
+    async commentPost(post) {
+            try {
+                await PostsApi.commentPost(post.id);
+                const newPosts = this.state.posts.filter(p => p.id !== post.id);
+                this.setState({
+                    posts: newPosts,
+                });
+            } catch (e) {
+                console.error(e);
+            }
+    }
 
     componentDidMount() {
         PostsApi.getAllPosts()
@@ -53,7 +64,13 @@ class PostsPage extends React.Component {
                 <PostForm onSubmit={(postData) => this.createPost(postData)}/>
 
                 {posts.map(post => 
-                    <PostCard key={post.id} post={post} onDeleteClick={() => this.deletePost(post)}/>
+                    <PostCard
+                        key={post.id}
+                        post={post}
+                        commentPost={post}
+                        onDeleteClick={() => this.deletePost(post)}
+                        onCommentClick={() => this.commentPost(post)}
+                     />
                 )}
             </div>
         );

@@ -19,7 +19,11 @@ class PostsApi {
 
     deletePost(id) {
         return Api.delete('/posts/'+id);
-    } 
+    }
+
+    commentPost(commentPost) {
+            return Api.put('/posts/', commentPost);
+        }
 }
 
 export default new PostsApi();

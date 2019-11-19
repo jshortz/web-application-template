@@ -30,6 +30,7 @@ function PostForm({onSubmit}) {
                             onClick={handleSubmit}>
                             Post
                         </button>
+
                     </div>
                 </div>
             </div>

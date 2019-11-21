@@ -1,7 +1,7 @@
 import React from "react";
-import CommentCard from "../comments/CommentCard"
+import CommentForm from "./CommentForm"
 
-function PostCard({post, onDeleteClick, onCommentClick}){
+function CommentCard({post, onCommentClick}){
         const [isCommentDisplayed, setIsCommentDisplayed] = React.useState(false);
 
         const [commentBody, setCommentBody] = React.useState("");
@@ -16,21 +16,26 @@ function PostCard({post, onDeleteClick, onCommentClick}){
 
 
     return (
-        <div id= "contentCommentForm" className="card mt-3">
+        <div className="card mt-3">
             <div className="card-body">
-                <p>
-                    {post.body}
-                </p>
+    
+                { isCommentDisplayed ?
+                    <div className="form-group">
+                    <CommentForm></CommentForm>
+                    </div>
+
+                    : ""
+                }
                 <button
-                    className="btn btn-danger"
-                    onClick={onDeleteClick}>Delete
+                   className="btn btn-primary"
+                   onClick={() => setIsCommentDisplayed(true)}>Comment
                 </button>
-                <CommentCard></CommentCard>
             </div>
 
+
+
         </div>
-        
     );
 }
 
-export default PostCard;
+export default CommentCard;

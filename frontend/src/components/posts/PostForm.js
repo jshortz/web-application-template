@@ -12,9 +12,9 @@ function PostForm({onSubmit}) {
     };
 
     return (
-        <div className="card">
+        <div id="contentPostForm"className="card">
             <div className="card-body">
-                <h4 className="card-title" >What's going on in your programming journey?</h4>
+                <h4 className="card-title" >What's on your mind?</h4>
                 <div>
                     <div className="form-group">
                         <textarea 
@@ -28,8 +28,9 @@ function PostForm({onSubmit}) {
                         <button 
                             className="btn btn-primary" 
                             onClick={handleSubmit}>
-                            Commiserate
+                            Post
                         </button>
+
                     </div>
                 </div>
             </div>

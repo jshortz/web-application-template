@@ -2,14 +2,16 @@ import React from "react";
 import PostsApi from "./../../api/PostsApi";
 import PostForm from "./PostForm";
 import PostCard from "./PostCard";
+import CommentApi from "../../api/CommentApi";
 
 class PostsPage extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            posts : []
+            posts : [],
         };
+
     }
 
     async createPost(postData) {
@@ -38,6 +40,17 @@ class PostsPage extends React.Component {
         }
     }
 
+    async createComment(comment) {
+            try {
+                await CommentApi.createComment(comment);
+                const newComment = this.state.createComment.filter(p => p.id !== comment.id);
+                this.setState({
+                    comment: newComment,
+                });
+            } catch (e) {
+                console.error(e);
+            }
+    }
 
     componentDidMount() {
         PostsApi.getAllPosts()
@@ -53,7 +66,13 @@ class PostsPage extends React.Component {
                 <PostForm onSubmit={(postData) => this.createPost(postData)}/>
 
                 {posts.map(post => 
-                    <PostCard key={post.id} post={post} onDeleteClick={() => this.deletePost(post)}/>
+                    <PostCard
+                        key={post.id}
+                        post={post}
+                        commentPost={post}
+                        onDeleteClick={() => this.deletePost(post)}
+                        onCommentClick={(commentBody) => this.createComment(commentBody)}
+                     />
                 )}
             </div>
         );

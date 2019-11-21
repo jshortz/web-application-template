@@ -36,10 +36,10 @@ body {
 }
 
 #content {
-border-radius:  30px;
+border-radius:  20px;
 }
 #contentchat{
-border-radius:  30px;
+border-radius:  20px;
 height: 1160px;
 }
 .slogan{
@@ -47,4 +47,10 @@ font-family: emoji;
 font-size: 30px;
 line-height: 12pt;
 left: 10px;
+}
+#contentCommentForm{
+border-radius:  15px;
+}
+#contentPostForm{
+border-radius:  15px;
 }

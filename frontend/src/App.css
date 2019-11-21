@@ -28,7 +28,7 @@ body {
 }
 
 #ournavbar {
-    background: linear-gradient(to right, #009090, black, #004848);
+    background: linear-gradient(to right, #006363, #002F2F, #008282, black, #004848);
 }
 
 #ournavlogo {
@@ -71,4 +71,35 @@ color:white;
 
 #navbarSloganHolder {
 margin-right: 3rem;
+}
+
+#buttoncolor {
+font-size: 130%;
+background-image: url("/motherboard_dark.png");
+background-size: 100px 100px;
+color: white;
+}
+
+.card-body {
+background-image: url("/motherboard_dark.png");
+background-size: 200px 200px;
+}
+
+#postCard {
+color: white;
+font-weight: bold;
+text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+}
+
+#postSubmitButton {
+background: #002F2F;
+color: white;
 }

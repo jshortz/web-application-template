@@ -38,13 +38,37 @@ body {
 #content {
 border-radius:  30px;
 }
-#contentchat{
+
+#contentchat {
 border-radius:  30px;
 height: 1160px;
 }
-.slogan{
+
+.slogan {
 font-family: emoji;
 font-size: 30px;
 line-height: 12pt;
 left: 10px;
+}
+
+.nav-item {
+font-size: 140%;
+margin-left: 2.5rem;
+margin-right: 2.5rem;
+}
+
+#how-toLink {
+color: white;
+}
+
+#homeLink {
+color: white;
+}
+
+#postsLink {
+color:white;
+}
+
+#navbarSloganHolder {
+margin-right: 3rem;
 }

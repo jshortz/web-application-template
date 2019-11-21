@@ -7,7 +7,7 @@ function Navbar({onLogout}) {
         <Link to="/">
         <img class="navlogo" alt="No2ProLogo" src="logo192.png" width="100" height="100" class="d-inline-block align-top" alt="" id="ournavlogo"/>
         </Link>
-            <a className= "col px-md-4 navbar-brand" href="#">
+            <a className="col px-md-4 navbar-brand" href="#" id="navbarSloganHolder">
             <h2 class="slogan">  From Nogrammer </h2>
             <h2 class="slogan">  to Programmer  </h2>
             </a>
@@ -17,19 +17,19 @@ function Navbar({onLogout}) {
             <div className="collapse navbar-collapse" id="navbarColor01">
                 <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link">
+                            <Link to="/" className="nav-link" id="homeLink">
                                 Home
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to="/posts" className="nav-link">
+                            <Link to="/posts" className="nav-link" id="postsLink">
                                 Posts
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to="/chat" className="nav-link">
+                            <Link to="/chat" className="nav-link" id="how-toLink">
                                 How-to
                             </Link>
                         </li>

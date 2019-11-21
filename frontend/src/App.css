@@ -34,3 +34,17 @@ body {
 #ournavlogo {
     border-radius: 17px;
 }
+
+#content {
+border-radius:  30px;
+}
+#contentchat{
+border-radius:  30px;
+height: 1160px;
+}
+.slogan{
+font-family: emoji;
+font-size: 30px;
+line-height: 12pt;
+left: 10px;
+}

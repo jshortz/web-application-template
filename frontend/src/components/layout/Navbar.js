@@ -8,8 +8,8 @@ function Navbar({onLogout}) {
         <img class="navlogo" alt="No2ProLogo" src="logo192.png" width="100" height="100" class="d-inline-block align-top" alt="" id="ournavlogo"/>
         </Link>
             <a className= "col px-md-4 navbar-brand" href="#">
-            <h2>  From Nogrammer </h2>
-            <h2>  to Programmer  </h2>
+            <h2 class="slogan">  From Nogrammer </h2>
+            <h2 class="slogan">  to Programmer  </h2>
             </a>
             <button className="col px-md-10 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@ function Navbar({onLogout}) {
                         </li>
                 </ul>
 
-                <button className="btn btn-outline-info my-2 my-sm-0" onClick={onLogout}>Logout</button>
+                <button className="btn btn-outline-info my-2 my-sm-0" id="buttoncolor" onClick={onLogout}>Logout</button>
             </div>
         </nav>
     );

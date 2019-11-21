@@ -4,7 +4,7 @@ import React, { Component } from "react";
 class ChatPage extends Component {
     render() {
         return (
-            <div className="card">
+            <div id="contentchat" className="card">
                 <div className="card-body">
                     <h3 className="card-title"> How to Become a Programmer!</h3>
                     <p>This guide does not promise to give a magically way to becoming a programmer,

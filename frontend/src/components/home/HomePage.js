@@ -3,8 +3,8 @@ import React, { Component } from "react";
 class HomePage extends Component {
     render() {
         return (
-                    <div className="card">
-                        <div className="card-body">
+                    <div className="card" id= "content">
+                        <div className="card-body" >
                             <h4 className="card-title">Welcome to Nogrammer to Programmer!</h4>
                             <p>We are a group of students in Stockholm fighting off the winter cold by learning how to program. We built this site with Spring, PostgreSQL, React, React router, Axios, and other goodies. Check the following links for documentation and guides:</p>
                             <ul>

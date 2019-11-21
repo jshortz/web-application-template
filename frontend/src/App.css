@@ -103,3 +103,9 @@ text-shadow:
 background: #002F2F;
 color: white;
 }
+
+.postBodyStyle {
+color: black;
+background: white;
+padding: 1rem;
+}
